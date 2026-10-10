@@ -11,7 +11,7 @@ export const Route = createFileRoute("/")({
 function Index() {
   return (
     <div
-      className="flex min-h-screen items-center justify-center"
+      className="flex min-h-screen flex-col items-center justify-center gap-4"
       style={{ backgroundColor: "#fcfbf8" }}
     >
       <img
@@ -19,6 +19,9 @@ function Index() {
         src="https://cdn.gpteng.co/blank-app-v1.svg"
         alt="Your app will live here!"
       />
+      <footer className="text-xs text-muted-foreground">
+        Site rebuild triggered — {new Date().toISOString().slice(0, 10)}
+      </footer>
     </div>
   );
 }
