@@ -30,20 +30,17 @@ jobs:
       - name: Build
         run: bun run build
 
+      - name: Prerender pages to static HTML
+        run: bun scripts/prerender.mjs
+
       - name: Prepare static output
         run: |
-          # Nitro/TanStack Start places static assets in .output/public.
-          # Fall back to dist/client or dist if the layout differs.
-          if [ -d .output/public ]; then
-            cp -r .output/public _site
-          elif [ -d dist/client ]; then
-            cp -r dist/client _site
-          else
-            cp -r dist _site
-          fi
+          cp -r dist/client _site
+          test -f _site/index.html || (echo "index.html missing" && exit 1)
           # SPA-style fallback so deep links don't 404 on Pages
-          cp _site/index.html _site/404.html 2>/dev/null || true
-
+          cp _site/index.html _site/404.html
+          # Disable Jekyll processing
+          touch _site/.nojekyll
           # GitHub Pages requires the CNAME file at the root of the artifact
           if [ -f public/CNAME ]; then cp public/CNAME _site/CNAME; fi
 
