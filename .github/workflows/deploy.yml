@@ -43,7 +43,8 @@ jobs:
 
       - name: Prepare static output
         run: |
-          cp -r dist/client _site
+          # Lovable builds to dist/client; GitHub's runner builds to .output/public
+          if [ -d dist/client ]; then cp -r dist/client _site; else cp -r .output/public _site; fi
           test -f _site/index.html || (echo "index.html missing" && exit 1)
           # SPA-style fallback so deep links don't 404 on Pages
           cp _site/index.html _site/404.html
