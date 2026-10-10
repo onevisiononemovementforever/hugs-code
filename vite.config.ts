@@ -12,4 +12,14 @@ export default defineConfig({
     // nitro/vite builds from this
     server: { entry: "server" },
   },
+  // Pin build output to dist/server + dist/client everywhere (Lovable already does this;
+  // outside Lovable, e.g. GitHub Actions, nitro would otherwise default to .output/).
+  nitro: {
+    preset: "cloudflare-module",
+    output: {
+      dir: "dist",
+      serverDir: "dist/server",
+      publicDir: "dist/client",
+    },
+  },
 });
