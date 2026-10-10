@@ -44,6 +44,9 @@ jobs:
           # SPA-style fallback so deep links don't 404 on Pages
           cp _site/index.html _site/404.html 2>/dev/null || true
 
+          # GitHub Pages requires the CNAME file at the root of the artifact
+          if [ -f public/CNAME ]; then cp public/CNAME _site/CNAME; fi
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
