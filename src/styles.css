@@ -142,3 +142,73 @@
     color: var(--color-foreground);
   }
 }
+
+/* ============================================================
+   Aero_RescueNet landing page (scoped under .arn-page)
+   ============================================================ */
+.arn-page {
+  box-sizing: border-box;
+  background-color: #0b0f19;
+  color: #f3f4f6;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 24px;
+  min-height: 100vh;
+}
+.arn-page *,
+.arn-page *::before,
+.arn-page *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+.arn-page header { width: 100%; max-width: 1024px; display: flex; justify-content: space-between; align-items: center; margin-bottom: 64px; }
+.arn-page .brand { font-size: 20px; font-weight: 800; color: #22d3ee; letter-spacing: 0.05em; }
+.arn-page .badge { padding: 6px 14px; font-size: 11px; font-weight: 700; background-color: #083344; color: #22d3ee; border-radius: 9999px; border: 1px solid #155e75; text-transform: uppercase; }
+
+.arn-page main { width: 100%; max-width: 1024px; display: grid; grid-template-columns: 1fr; gap: 64px; align-items: center; margin-bottom: 80px; }
+@media (min-width: 768px) { .arn-page main { grid-template-columns: 1fr 1fr; } }
+
+.arn-page .hero-left { display: flex; flex-direction: column; gap: 24px; }
+.arn-page .sub-tag { font-size: 12px; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 0.1em; }
+.arn-page h1 { font-size: 44px; font-weight: 800; color: #ffffff; line-height: 1.15; }
+.arn-page h1 span { background: linear-gradient(to right, #22d3ee, #2563eb); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; }
+.arn-page .hero-desc { color: #9ca3af; font-size: 17px; line-height: 1.6; }
+
+.arn-page .waitlist-card { background-color: #111827; padding: 32px; border-radius: 20px; border: 1px solid #1f2937; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5); }
+.arn-page .card-title { font-size: 16px; font-weight: 600; color: #ffffff; margin-bottom: 4px; }
+.arn-page .card-sub { font-size: 13px; color: #6b7280; margin-bottom: 20px; }
+
+.arn-page .form-row { display: flex; flex-direction: column; gap: 12px; }
+@media (min-width: 480px) { .arn-page .form-row { flex-direction: row; } }
+.arn-page input[type="email"] { flex: 1; padding: 14px 16px; background-color: #030712; border: 1px solid #374151; border-radius: 12px; color: #ffffff; font-size: 14px; transition: border-color 0.2s; }
+.arn-page input[type="email"]:focus { outline: none; border-color: #06b6d4; }
+.arn-page button { padding: 14px 24px; background: linear-gradient(to right, #06b6d4, #2563eb); border: none; border-radius: 12px; color: #ffffff; font-weight: 700; font-size: 14px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
+.arn-page button:hover { opacity: 0.9; }
+.arn-page .launch-note { font-size: 11px; color: #4b5563; text-align: center; margin-top: 12px; }
+
+.arn-page .right-column { display: flex; flex-direction: column; gap: 32px; }
+.arn-page .video-container { width: 100%; aspect-ratio: 16/9; background-color: #030712; border-radius: 20px; border: 1px solid #1f2937; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); }
+.arn-page .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+
+.arn-page .partners-box { background-color: rgba(17, 24, 39, 0.4); padding: 24px; border-radius: 20px; border: 1px solid rgba(31, 41, 55, 0.6); }
+.arn-page .partners-title { font-size: 12px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; justify-content: space-between; }
+.arn-page .partners-desc { font-size: 13px; color: #6b7280; line-height: 1.5; margin-bottom: 16px; }
+.arn-page .tag-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.arn-page .partner-tag { background-color: #030712; padding: 8px 16px; border-radius: 8px; border: 1px solid #1f2937; font-size: 13px; font-weight: 700; color: #e5e7eb; }
+
+.arn-page .features-section { width: 100%; max-width: 1024px; padding-top: 64px; border-top: 1px solid #1f2937; margin-bottom: 64px; }
+.arn-page .feat-header { max-width: 640px; margin: 0 auto 48px auto; text-align: center; }
+.arn-page .feat-header h2 { font-size: 12px; font-weight: 700; color: #06b6d4; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 8px; }
+.arn-page .feat-header p { font-size: 24px; font-weight: 700; color: #ffffff; }
+
+.arn-page .feat-grid { display: grid; grid-template-columns: 1fr; gap: 32px; }
+@media (min-width: 768px) { .arn-page .feat-grid { grid-template-columns: 1fr 1fr 1fr; } }
+.arn-page .feat-card { background-color: rgba(17, 24, 39, 0.2); padding: 28px; border-radius: 16px; border: 1px solid #111827; display: flex; flex-direction: column; gap: 16px; }
+.arn-page .feat-num { font-family: monospace; font-size: 14px; color: #06b6d4; }
+.arn-page .feat-card h3 { font-size: 18px; font-weight: 700; color: #ffffff; }
+.arn-page .feat-desc { font-size: 14px; color: #9ca3af; line-height: 1.6; }
+.arn-page .feat-footer { font-size: 10px; font-weight: 700; color: #0891b2; text-transform: uppercase; letter-spacing: 0.05em; margin-top: auto; }
+
+.arn-page footer { width: 100%; max-width: 1024px; border-top: 1px solid #111827; padding-top: 32px; display: flex; flex-direction: column; gap: 16px; justify-content: space-between; align-items: center; font-size: 13px; color: #4b5563; }
+@media (min-width: 640px) { .arn-page footer { flex-direction: row; } }
+.arn-page .foot-right { font-weight: 600; color: #6b7280; text-transform: uppercase; font-size: 11px; letter-spacing: 0.05em; }
