@@ -20,7 +20,7 @@ export const Route = createFileRoute("/")({
     ],
   }),
   component: Index,
-};
+});
 
 const HEYGEN_EMBED_URL = "https://app.heygen.com/embeds/55adeb51b9d4423d823377a506fc952c";
 
