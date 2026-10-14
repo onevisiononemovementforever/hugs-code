@@ -99,30 +99,34 @@ function Index() {
         <div className="feat-grid">
           <div className="feat-card">
             <div className="feat-num">01 /</div>
-            <h3>Stateless Architecture</h3>
+            <h3>"Zero-Trace" Reliability</h3>
             <div className="feat-desc">
-              No session baggage. No single point of failure. Every request routes independently, so
-              your infrastructure stays resilient at any scale.
+              Because the platform doesn't store your personal journey data, it cannot be hacked or
+              leaked in a corporate data breach. Furthermore, because every request is entirely
+              independent, the app will never crash or freeze up right when you are trying to scan
+              your parking pass or check-in. It is completely uncrashable and completely private.
             </div>
             <div className="feat-footer">Zero state. All systems go.</div>
           </div>
 
           <div className="feat-card">
             <div className="feat-num">02 /</div>
-            <h3>Low Latency</h3>
+            <h3>Instant Updates</h3>
             <div className="feat-desc">
-              Less waiting. More moving. A lean routing engine built for real-time decisions and
-              high throughput, when every second counts.
+              When you are rushing to the airport, every second counts. This engine works in absolute
+              real time. No clunky loading wheels, no delayed notifications, and no lagging screens.
             </div>
             <div className="feat-footer">Built for the fast lane</div>
           </div>
 
           <div className="feat-card">
             <div className="feat-num">03 /</div>
-            <h3>Dual B2B/B2C Scalability</h3>
+            <h3>The Ultimate Airport Bridge</h3>
             <div className="feat-desc">
-              One engine. Two worlds. Connect enterprise airport infrastructure or power your
-              personal journey—with the same seamless routing core.
+              You are getting the exact same powerful, heavy-duty software that major airlines and
+              massive global airports trust to run their operations, packed into a simple tool right
+              in your pocket. It perfectly bridges the gap between massive airport systems and your
+              personal travel timeline.
             </div>
             <div className="feat-footer">Enterprise meets everyday</div>
           </div>
