@@ -13,7 +13,7 @@ const layouts = [
 const layout = layouts.find((l) => existsSync(join(root, l.server)));
 if (!layout) throw new Error(`No server build found. Looked for: ${layouts.map((l) => l.server).join(", ")}`);
 
-const routes = ["/"];
+const routes = ["/", "/privacy"];
 const mod = await import(pathToFileURL(join(root, layout.server)).href);
 const handler = mod.default;
 const outDir = join(root, layout.client);

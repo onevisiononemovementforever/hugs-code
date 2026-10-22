@@ -1,142 +1,100 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
+
+import { SiteFooter } from "@/components/SiteFooter";
+
+const TITLE = "AERO-RESCUE NET | Running late for your flight?";
+const DESCRIPTION =
+  "AERO-RESCUE NET gets you to the terminal faster. Drive straight to the terminal drop-off and a Meet & Greet valet parks your car in the car park you've already booked.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Aero_RescueNet | The Stateless Router Engine" },
-      {
-        name: "description",
-        content:
-          "Real-time routing from highway to departure gate. Join the Aero_RescueNet priority waitlist — launching first across UK & European hubs.",
-      },
-      { property: "og:title", content: "Aero_RescueNet | The Stateless Router Engine" },
-      {
-        property: "og:description",
-        content:
-          "Real-time routing from highway to departure gate. Join the priority waitlist — no missed flights.",
-      },
+      { title: TITLE },
+      { name: "description", content: DESCRIPTION },
+      { property: "og:title", content: TITLE },
+      { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
+      { property: "og:image", content: "https://aerorescuenet.com/videos/aero-rescue-net-v5-poster.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
   component: Index,
 });
 
-const HEYGEN_EMBED_URL = "https://app.heygen.com/embeds/55adeb51b9d4423d823377a506fc952c";
-
 function Index() {
   return (
     <div className="arn-page">
       <header>
-        <div className="brand">AERO_RESCUE NET</div>
+        <div className="brand">AERO-RESCUE NET</div>
         <div className="badge">Early Access</div>
       </header>
 
       <main>
         <div className="hero-left">
-          <div className="sub-tag">The Stateless Router Engine</div>
           <h1>
-            No More
+            Running late for
             <br />
-            <span>Missed Flights!</span>
+            <span>your flight?</span>
           </h1>
           <p className="hero-desc">
-            Life moves fast. But you shouldn't be late! Real-time routing. High throughput. Zero
-            friction. From highway to departure gate, Aero_Rescue connects enterprise infrastructure
-            and everyday travellers—without the bottlenecks.
+            AERO-RESCUE NET gets you to the terminal faster. Drive straight to the terminal
+            drop-off, hand your keys to a Meet &amp; Greet valet, and they park your car in the car
+            park you&apos;ve already booked. About 40 minutes faster than parking and taking the
+            shuttle. £120, charged only once your drop-off is confirmed.
           </p>
 
           <div className="waitlist-card">
-            <div className="card-title">Join the Priority Waitlist</div>
-            <div className="card-sub">Just launch updates. No spam. No commitments.</div>
+            <div className="card-title">Join the priority waitlist</div>
+            <div className="card-sub">
+              We&apos;re preparing our first pilot at a UK airport and looking for our first
+              partners: airports, Meet &amp; Greet valet operators and parking booking platforms.
+              Join the waitlist for launch news.
+            </div>
 
             <form action="https://formspree.io/f/mljgnzyd" method="POST">
               <div className="form-row">
-                <input type="email" name="email" required placeholder="Email address" />
+                <input
+                  type="email"
+                  name="email"
+                  required
+                  placeholder="Email address"
+                  aria-label="Email address"
+                />
                 <button type="submit">Join Waitlist</button>
               </div>
             </form>
-            <div className="launch-note">Launching first across UK &amp; European hubs</div>
+            <div className="launch-note">
+              We&apos;ll use your email only to send launch updates. Unsubscribe at any time.{" "}
+              <Link to="/privacy">Privacy notice</Link>
+            </div>
           </div>
         </div>
 
         <div className="right-column">
           <div className="video-container">
-            <iframe
-              width="560"
-              height="315"
-              src={HEYGEN_EMBED_URL}
-              title="Aero Rescue Net — Protect the Final Mile"
-              frameBorder="0"
-              allow="encrypted-media; fullscreen;"
-              allowFullScreen
-            />
+            <video
+              controls
+              preload="metadata"
+              playsInline
+              poster="/videos/aero-rescue-net-v5-poster.jpg"
+              title="AERO-RESCUE NET: Protect the Final Mile"
+              aria-label="AERO-RESCUE NET: Protect the Final Mile"
+            >
+              <source src="/videos/aero-rescue-net-v5.mp4" type="video/mp4" />
+            </video>
           </div>
 
           <div className="partners-box">
-            <div className="partners-title">
-              Target Launch Partners <span>↗</span>
-            </div>
+            <div className="partners-title">Privacy by design</div>
             <div className="partners-desc">
-              This waitlist is designed to show demand — every early-access signup helps us build
-              the case to sign a contract and launch a pilot program in infrastructure trials with
-              our chosen partners :
-            </div>
-            <div className="tag-row">
-              <div className="partner-tag">MAG / Manchester Airports Group</div>
-              <div className="partner-tag">CAVU</div>
+              Your parking booking, number plate and flight stay on your phone until you ask for a
+              rescue. Card details are held by our payment provider, never by us.
             </div>
           </div>
         </div>
       </main>
 
-      <section className="features-section">
-        <div className="feat-header">
-          <h2>Engineered for Momentum</h2>
-          <p>Less friction. More forward. For the systems that scale, and the people who move.</p>
-        </div>
-
-        <div className="feat-grid">
-          <div className="feat-card">
-            <div className="feat-num">01 /</div>
-            <h3>"Zero-Trace" Reliability</h3>
-            <div className="feat-desc">
-              Because the platform doesn't store your personal journey data, it cannot be hacked or
-              leaked in a corporate data breach. Furthermore, because every request is entirely
-              independent, the app will never crash or freeze up right when you are trying to scan
-              your parking pass or check-in. It is completely uncrashable and completely private.
-            </div>
-            <div className="feat-footer">Zero state. All systems go.</div>
-          </div>
-
-          <div className="feat-card">
-            <div className="feat-num">02 /</div>
-            <h3>Instant Updates</h3>
-            <div className="feat-desc">
-              When you are rushing to the airport, every second counts. This engine works in absolute
-              real time. No clunky loading wheels, no delayed notifications, and no lagging screens.
-            </div>
-            <div className="feat-footer">Built for the fast lane</div>
-          </div>
-
-          <div className="feat-card">
-            <div className="feat-num">03 /</div>
-            <h3>The Ultimate Airport Bridge</h3>
-            <div className="feat-desc">
-              You are getting the exact same powerful, heavy-duty software that major airlines and
-              massive global airports trust to run their operations, packed into a simple tool right
-              in your pocket. It perfectly bridges the gap between massive airport systems and your
-              personal travel timeline.
-            </div>
-            <div className="feat-footer">Enterprise meets everyday</div>
-          </div>
-        </div>
-      </section>
-
-      <footer>
-        <div>AERO_RESCUE NET — The Stateless Router Engine</div>
-        <div className="foot-right">UK &amp; European hubs first</div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 }

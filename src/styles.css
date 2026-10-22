@@ -144,7 +144,7 @@
 }
 
 /* ============================================================
-   Aero_RescueNet landing page (scoped under .arn-page)
+   AERO-RESCUE NET landing page (scoped under .arn-page)
    ============================================================ */
 .arn-page {
   box-sizing: border-box;
@@ -184,11 +184,15 @@
 .arn-page input[type="email"]:focus { outline: none; border-color: #06b6d4; }
 .arn-page button { padding: 14px 24px; background: linear-gradient(to right, #06b6d4, #2563eb); border: none; border-radius: 12px; color: #ffffff; font-weight: 700; font-size: 14px; cursor: pointer; transition: opacity 0.2s; white-space: nowrap; }
 .arn-page button:hover { opacity: 0.9; }
-.arn-page .launch-note { font-size: 11px; color: #4b5563; text-align: center; margin-top: 12px; }
+.arn-page .launch-note { font-size: 12px; color: #6b7280; text-align: center; margin-top: 12px; line-height: 1.5; }
+.arn-page .launch-note a { color: #22d3ee; text-decoration: underline; }
+.arn-page .card-sub { line-height: 1.5; }
+.arn-page a.brand, .arn-page a.badge { text-decoration: none; }
 
 .arn-page .right-column { display: flex; flex-direction: column; gap: 32px; }
 .arn-page .video-container { width: 100%; aspect-ratio: 16/9; background-color: #030712; border-radius: 20px; border: 1px solid #1f2937; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.3); }
 .arn-page .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none; }
+.arn-page .video-container video { position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: contain; background-color: #030712; }
 
 .arn-page .partners-box { background-color: rgba(17, 24, 39, 0.4); padding: 24px; border-radius: 20px; border: 1px solid rgba(31, 41, 55, 0.6); }
 .arn-page .partners-title { font-size: 12px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 8px; display: flex; justify-content: space-between; }
@@ -211,4 +215,15 @@
 
 .arn-page footer { width: 100%; max-width: 1024px; border-top: 1px solid #111827; padding-top: 32px; display: flex; flex-direction: column; gap: 16px; justify-content: space-between; align-items: center; font-size: 13px; color: #4b5563; }
 @media (min-width: 640px) { .arn-page footer { flex-direction: row; } }
-.arn-page .foot-right { font-weight: 600; color: #6b7280; text-transform: uppercase; font-size: 11px; letter-spacing: 0.05em; }
+.arn-page .foot-right { font-weight: 600; color: #6b7280; text-transform: uppercase; font-size: 11px; letter-spacing: 0.05em; text-decoration: none; white-space: nowrap; }
+.arn-page a.foot-right:hover { color: #22d3ee; }
+.arn-page footer .legal { font-size: 12px; line-height: 1.5; color: #6b7280; max-width: 760px; }
+
+.arn-page .legal-page { width: 100%; max-width: 760px; margin-bottom: 64px; color: #d1d5db; font-size: 15px; line-height: 1.7; }
+.arn-page .legal-page h1 { font-size: 30px; margin-bottom: 8px; }
+.arn-page .legal-page .updated { color: #6b7280; font-size: 13px; margin-bottom: 32px; }
+.arn-page .legal-page h2 { font-size: 18px; font-weight: 700; color: #ffffff; margin: 28px 0 8px; }
+.arn-page .legal-page p { margin-bottom: 12px; }
+.arn-page .legal-page ul { padding-left: 22px; margin-bottom: 12px; }
+.arn-page .legal-page li { margin-bottom: 8px; }
+.arn-page .legal-page a { color: #22d3ee; text-decoration: underline; }
