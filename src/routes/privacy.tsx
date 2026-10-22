@@ -3,7 +3,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { SiteFooter } from "@/components/SiteFooter";
 
 // Contact address for privacy requests, shown on this page.
-const CONTACT_EMAIL = "CONTACT_EMAIL_TO_CONFIRM";
+const CONTACT_EMAIL = "admin@onevisiononemovementforever.com";
 const LAST_UPDATED = "22 October 2026";
 
 export const Route = createFileRoute("/privacy")({
