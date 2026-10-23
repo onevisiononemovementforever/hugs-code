@@ -186,6 +186,8 @@
 .arn-page button:hover { opacity: 0.9; }
 .arn-page .launch-note { font-size: 12px; color: #6b7280; text-align: center; margin-top: 12px; line-height: 1.5; }
 .arn-page .launch-note a { color: #22d3ee; text-decoration: underline; }
+.arn-page .joined-note { font-size: 14px; color: #e5e7eb; line-height: 1.6; background-color: #030712; border: 1px solid #155e75; border-radius: 12px; padding: 14px 16px; }
+.arn-page .hp-field { position: absolute; left: -10000px; width: 1px; height: 1px; opacity: 0; border: 0; }
 .arn-page .card-sub { line-height: 1.5; }
 .arn-page a.brand, .arn-page a.badge { text-decoration: none; }
 

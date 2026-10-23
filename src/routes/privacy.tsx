@@ -4,7 +4,7 @@ import { SiteFooter } from "@/components/SiteFooter";
 
 // Contact address for privacy requests, shown on this page.
 const CONTACT_EMAIL = "admin@onevisiononemovementforever.com";
-const LAST_UPDATED = "22 October 2026";
+const LAST_UPDATED = "23 October 2026";
 
 export const Route = createFileRoute("/privacy")({
   head: () => ({
@@ -52,7 +52,7 @@ function Privacy() {
           <li>
             <strong>Your email address</strong>, when you join the waitlist. We use it only to send
             you updates about the launch of AERO-RESCUE NET. Our lawful basis is your consent, which
-            you give by joining. You can withdraw it at any time.
+            you give by joining and confirming your email address. You can withdraw it at any time.
           </li>
           <li>
             <strong>Basic technical information</strong> that our website host records
@@ -64,8 +64,9 @@ function Privacy() {
 
         <h2>Who we share it with</h2>
         <p>
-          Only the service providers that run this website and the waitlist for us: Formspree,
-          which receives and stores waitlist sign-ups, and GitHub Pages, which hosts this website.
+          Only the service providers that run this website and the waitlist for us: Brevo, which
+          stores the waitlist and sends our emails (including the email asking you to confirm your
+          sign-up), and GitHub Pages, which hosts this website.
           They process it on our instructions. We do not sell your information or use it for
           advertising. If a provider stores information outside the UK, it does so with safeguards
           recognised under UK data protection law.
