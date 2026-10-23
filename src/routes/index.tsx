@@ -1,6 +1,11 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { useState } from "react";
 
 import { SiteFooter } from "@/components/SiteFooter";
+
+// Brevo sign-up form "AERO-RESCUE NET waitlist (website)" (double opt-in, list #3).
+const BREVO_FORM_URL =
+  "https://7d274fe0.sibforms.com/serve/MUIFAPHe3aoV2tOzEaMyb5aXBSczF_3YQznGVIrt0iBJIjtNZzlRd0Q7zADCiOrJwEUL61go9L9aA9O4ou7gJGDJS-VAw0p-gQcjMvRDPdfmmWeUxIwPum0NtRXBGES4tnlzoIfriqkil_pRj05Zd6fPUbyQbHvmepRMGbOiXZzno5F7bup9DhxQ-oKhQ3w5yqmwMZZZ0CGD-6VCXA==";
 
 const TITLE = "AERO-RESCUE NET | Running late for your flight?";
 const DESCRIPTION =
@@ -22,6 +27,7 @@ export const Route = createFileRoute("/")({
 });
 
 function Index() {
+  const [joined, setJoined] = useState(false);
   return (
     <div className="arn-page">
       <header>
@@ -51,18 +57,44 @@ function Index() {
               Join the waitlist for launch news.
             </div>
 
-            <form action="https://formspree.io/f/mljgnzyd" method="POST">
+            {joined && (
+              <div className="joined-note" role="status">
+                Thank you. Please check your inbox and click the link in our email to confirm your
+                place on the waitlist.
+              </div>
+            )}
+            <form
+              action={BREVO_FORM_URL}
+              method="POST"
+              target="brevo-submit"
+              hidden={joined}
+              onSubmit={() => window.setTimeout(() => setJoined(true), 0)}
+            >
               <div className="form-row">
                 <input
                   type="email"
-                  name="email"
+                  name="EMAIL"
                   required
                   placeholder="Email address"
                   aria-label="Email address"
+                  autoComplete="email"
                 />
                 <button type="submit">Join Waitlist</button>
               </div>
+              {/* Brevo spam trap: real visitors never fill this in */}
+              <input
+                type="text"
+                name="email_address_check"
+                defaultValue=""
+                tabIndex={-1}
+                autoComplete="off"
+                aria-hidden="true"
+                className="hp-field"
+              />
+              <input type="hidden" name="locale" value="en" />
+              <input type="hidden" name="html_type" value="simple" />
             </form>
+            <iframe name="brevo-submit" title="Waitlist sign-up" className="hp-field" />
             <div className="launch-note">
               We&apos;ll use your email only to send launch updates. Unsubscribe at any time.{" "}
               <Link to="/privacy">Privacy notice</Link>
