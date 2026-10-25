@@ -45,7 +45,7 @@ function Index() {
           <p className="hero-desc">
             AERO-RESCUE NET gets you to the terminal faster. Drive straight to the terminal
             drop-off, hand your keys to a Meet &amp; Greet valet, and they park your car in the car
-            park you&apos;ve already booked. About 40 minutes faster than parking and taking the
+            park you&apos;ve already booked. Up to 40 minutes faster than parking and taking the
             shuttle. £120, charged only once your drop-off is confirmed.
           </p>
 
@@ -112,7 +112,7 @@ function Index() {
               title="AERO-RESCUE NET: Protect the Final Mile"
               aria-label="AERO-RESCUE NET: Protect the Final Mile"
             >
-              <source src="/videos/aero-rescue-net-v5-customer.mp4" type="video/mp4" />
+              <source src="/videos/aero-rescue-net-v6-customer.mp4" type="video/mp4" />
             </video>
           </div>
 
