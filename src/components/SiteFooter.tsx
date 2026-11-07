@@ -4,7 +4,7 @@ export function SiteFooter() {
   return (
     <footer>
       <div className="legal">
-        © 2026 ONE VISION ONE MOVEMENT FOREVER LTD, trading as AERO-RESCUE NET. Registered in
+        © 2026 ONEVISIONONEMOVEMENTFOREVER LTD, trading as AERO-RESCUE NET. Registered in
         Northern Ireland, company number NI744016. Registered office: 8 Rossdale Manor, Ballymena,
         Co. Antrim, BT42 2SL.
       </div>
