@@ -42,8 +42,9 @@ function Privacy() {
         <h2>Who we are</h2>
         <p>
           ONEVISIONONEMOVEMENTFOREVER LTD, trading as AERO-RESCUE NET, is registered in Northern
-          Ireland (company number NI744016). Registered office: 8 Rossdale Manor, Ballymena, Co.
-          Antrim, BT42 2SL. We are the data controller for information collected on this website.
+          Ireland (company number NI744016). Registered office: Ardilaun House, Pennybridge
+          Industrial Estate, Unit 22P, Ballymena, Co. Antrim, BT42 3HB. We are the data controller
+          for information collected on this website.
           Contact: <Mail />.
         </p>
 
