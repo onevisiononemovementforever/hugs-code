@@ -44,7 +44,8 @@ function Privacy() {
           ONEVISIONONEMOVEMENTFOREVER LTD, trading as AERO-RESCUE NET, is registered in Northern
           Ireland (company number NI744016). Registered office: Ardilaun House, Pennybridge
           Industrial Estate, Unit 22P, Ballymena, Co. Antrim, BT42 3HB. We are the data controller
-          for information collected on this website.
+          for information collected on this website. We are registered with the Information
+          Commissioner&apos;s Office (ICO), registration number ZC302784.
           Contact: <Mail />.
         </p>
 
