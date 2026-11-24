@@ -112,7 +112,7 @@ function Index() {
               title="AERO-RESCUE NET: Protect the Final Mile"
               aria-label="AERO-RESCUE NET: Protect the Final Mile"
             >
-              <source src="/videos/aero-rescue-net-v6-customer.mp4" type="video/mp4" />
+              <source src="/videos/aero-rescue-net-v7-customer.mp4" type="video/mp4" />
             </video>
           </div>
 
