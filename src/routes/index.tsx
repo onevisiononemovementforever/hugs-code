@@ -19,7 +19,7 @@ export const Route = createFileRoute("/")({
       { property: "og:title", content: TITLE },
       { property: "og:description", content: DESCRIPTION },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: "https://aerorescuenet.com/videos/aero-rescue-net-v6-customer-poster.jpg" },
+      { property: "og:image", content: "https://aerorescuenet.com/videos/aero-rescue-net-v9-customer-poster.jpg" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
   }),
@@ -108,11 +108,11 @@ function Index() {
               controls
               preload="metadata"
               playsInline
-              poster="/videos/aero-rescue-net-v6-customer-poster.jpg"
-              title="AERO-RESCUE NET: Protect the Final Mile"
-              aria-label="AERO-RESCUE NET: Protect the Final Mile"
+              poster="/videos/aero-rescue-net-v9-customer-poster.jpg"
+              title="AERO-RESCUE NET: Running late for your flight?"
+              aria-label="AERO-RESCUE NET: Running late for your flight?"
             >
-              <source src="/videos/aero-rescue-net-v7-customer.mp4" type="video/mp4" />
+              <source src="/videos/aero-rescue-net-v9-customer.mp4" type="video/mp4" />
             </video>
           </div>
 
